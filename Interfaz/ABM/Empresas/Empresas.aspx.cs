@@ -46,12 +46,12 @@ namespace Interfaz.ABM.Empresas
         protected void grid_Empresas_RowDataBound(object sender, GridViewRowEventArgs e)
         {
             NegocioCategoriaEmpresa negocioCategoriaEmpresa = new NegocioCategoriaEmpresa();
-            
+            NegocioDireccion negocioDireccion = new NegocioDireccion();
 
             if (e.Row.RowType == DataControlRowType.DataRow)
             {
                 e.Row.Cells[2].Text = negocioCategoriaEmpresa.descripcionxid(int.Parse(e.Row.Cells[2].Text));
-               
+                e.Row.Cells[3].Text = negocioDireccion.descripcionxid(int.Parse(e.Row.Cells[3].Text));
             }
         }
     }
