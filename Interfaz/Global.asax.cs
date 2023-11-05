@@ -17,5 +17,11 @@ namespace Interfaz
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+        string cadena ="";
+       
+        protected void Session_Start(object sender, EventArgs e)
+        {
+            Session["cadena"] = cadena;
+        }
     }
 }
